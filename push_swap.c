@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:06:53 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 01:24:01 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/18 05:42:18 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,36 +56,21 @@ int main(int argc, char const *argv[])
 	t_node *node;
     init(&data, &a, &b, &subseq);
 	parse(argc,argv,&data);
-	node = data.a->top;
-	while (node != NULL)
-	{
-		printf("%d ", node->val);
-		node = node->prev;
-	}
-	printf("\n");
 	lis(&data, data.a);
 	push_lis(&data);
-	node = data.a->top;
-	while (node != NULL)
+	while (data.b->size > 0)
 	{
-		printf("%d ", node->val);
-		node = node->prev;
+		set_moves(&data);
+		do_the_best_move(&data);
 	}
-	printf("\n");
-	node = data.b->top;
-	while (node != NULL)
-	{
-		printf("%d ", node->val);
-		node = node->prev;
-	}
-	printf("\n");
-	node = data.subseq->top;
-	while (node != NULL)
-	{
-		printf("%d ", node->val);
-		node = node->prev;
-	}
-	printf("\n");
+	min_to_top(&data);
+	// node = data.a->top;
+	// while (node != NULL)
+	// {
+	// 	printf("%d ", node->val);
+	// 	node = node->prev;
+	// }
+	//printf("\n");
 	term(&data);
     return 0;
 }

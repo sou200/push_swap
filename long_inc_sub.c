@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 20:17:41 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 01:19:27 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/18 02:03:15 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void push_lis(t_data *data)
 {
     t_node *subseq_node;
+    int a_size;
 
     subseq_node = data->subseq->top;
-    while(subseq_node != NULL)
+    a_size = data->a->size;
+    while(a_size--)
     {
-        if(subseq_node->val == data->a->top->val)
+        if(subseq_node != NULL && subseq_node->val == data->a->top->val)
         {
             ra(data, 1);
             subseq_node = subseq_node->prev;   

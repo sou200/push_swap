@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 02:15:37 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/17 21:28:46 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/18 05:02:41 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void				set_moves(t_data *data);
 void				do_the_best_move(t_data *data);
 void				iter_move(t_data *data, void (*move)(t_data *, int), int n,
 						int print);
-void				multi_rot(t_data *data);
+void				min_to_top(t_data *data);
 int					max(int a, int b);
 int					min(int a, int b);
 t_node				*get_node_to_elevate(t_data *data, t_node *bnode);
