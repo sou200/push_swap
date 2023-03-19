@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:06:53 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 05:42:18 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/18 23:41:15 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,31 @@ void f()
 	system("leaks my_checker");
 }
 
+void printstack(t_data *data)
+{
+	t_node *anode;
+	t_node *bnode;
+
+	anode = data->a->top;
+	bnode = data->b->top;
+
+	while (anode != NULL || bnode != NULL)
+	{
+		if(anode != NULL)
+		{
+			printf("% 3d ", anode->val);
+			anode = anode->prev;
+		}
+		if(bnode != NULL)
+		{
+			printf("% 3d % 3d", bnode->val, bnode->moves);
+			bnode = bnode->prev;
+		}
+		printf("\n");
+	}
+	
+}
+
 int main(int argc, char const *argv[])
 {
     t_stack	a;
@@ -56,14 +81,6 @@ int main(int argc, char const *argv[])
 	t_node *node;
     init(&data, &a, &b, &subseq);
 	parse(argc,argv,&data);
-	lis(&data, data.a);
-	push_lis(&data);
-	while (data.b->size > 0)
-	{
-		set_moves(&data);
-		do_the_best_move(&data);
-	}
-	min_to_top(&data);
 	// node = data.a->top;
 	// while (node != NULL)
 	// {

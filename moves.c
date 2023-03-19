@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 02:08:18 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 05:50:29 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/18 23:36:39 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,32 +56,34 @@ void iter_move(t_data *data, void (*move)(t_data *, int), int n, int print)
         move(data, print);
 }
 
-void calc_move(t_data *data, t_node *anode, t_node *bnode)
+int calc_move(t_data *data, t_node *anode, t_node *bnode)
 {
     int isadown;
     int isbdown;
+    int moves;
 
     isadown = anode->index > data->a->size/2;
     isbdown = bnode->index > data->b->size/2;
+    moves = 0;
     if(isadown == isbdown)
     {
         if(isadown)
-            bnode->moves = max(data->a->size - anode->index, data->b->size - bnode->index);
+            moves = max(data->a->size - anode->index, data->b->size - bnode->index);
         else
-            bnode->moves = max(anode->index, bnode->index);
+            moves = max(anode->index, bnode->index);
     } else
     {   
         if(isbdown)
-            bnode->moves = data->b->size - bnode->index;
+            moves = data->b->size - bnode->index;
         else
-            bnode->moves = bnode->index;
+            moves = bnode->index;
 
         if(isadown)
-            bnode->moves += data->a->size - anode->index;
+            moves += data->a->size - anode->index;
         else
-            anode->moves += anode->index;
+            moves += anode->index;
     }
-
+    return moves;
 }
 
 void set_moves(t_data *data)
@@ -98,7 +100,8 @@ void set_moves(t_data *data)
         {
             if(valid_move(data, anode, bnode))
             {
-               calc_move(data, anode, bnode);
+               bnode->moves = calc_move(data, anode, bnode);
+               break;
             }
             anode = anode->prev;
         }

@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 02:15:37 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 05:02:41 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/18 23:39:50 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,10 @@ void				min_to_top(t_data *data);
 int					max(int a, int b);
 int					min(int a, int b);
 t_node				*get_node_to_elevate(t_data *data, t_node *bnode);
-void				calc_move(t_data *data, t_node *anode, t_node *bnode);
+int					calc_move(t_data *data, t_node *anode, t_node *bnode);
 int					valid_move(t_data *data, t_node *anode, t_node *bnode);
 int					is_sorted(t_stack *stack);
 void				sort(t_data *data);
 
-void				ultra_lite_sort(t_data *data);
-void				lite_sort(t_data *data);
-void				lovely_sort(t_data *data);
 
 #endif
