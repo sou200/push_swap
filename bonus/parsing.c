@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 19:38:10 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/19 05:47:40 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 08:47:30 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static void	parceonearg(const char *arg, t_data *data)
 	{
 		i = 0;
 		args = ft_split(arg, ' ');
-		if (args == NULL)
+		if (args == NULL || *args == NULL)
 			exit_err_msg(ERR_MSG, data);
 		while (args[i] != NULL)
 			getint(data, args[i++]);
@@ -90,7 +90,7 @@ void	parse(int argc, const char *argv[], t_data *data)
 	int	i;
 
 	if (argc < 2)
-		exit_err_msg(ERR_MSG, data);
+		exit(0);
 	i = 1;
 	while (i < argc)
 		parceonearg(argv[i++], data);

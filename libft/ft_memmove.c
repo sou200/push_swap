@@ -6,11 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:50:00 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/02 19:56:26 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:40:30 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

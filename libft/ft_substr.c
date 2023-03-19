@@ -6,11 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:24:49 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/02 19:55:14 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:40:50 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
 static size_t	getalloclen(size_t slen, unsigned int start, size_t len)
 {

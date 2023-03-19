@@ -41,19 +41,18 @@ GNL_OBJ = $(GNL_SRC:.c=.o)
 NAME = push_swap
 CHECKER_NAME = checker
 
+
 all : $(NAME)
+	$(call draw)
 
 $(NAME) : $(OBJ) $(LIBFT_OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
-	$(call draw)
 
 %.o : %.c push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
-	$(call draw)
 
 bonus : $(BNS_OBJ) $(LIBFT_OBJ) $(GNL_OBJ)
 	$(CC) $(CFLAGS) $^ -o $(CHECKER_NAME)
-	$(call draw)
 
 clean : 
 	$(RM) $(OBJ) $(BNS_OBJ) $(LIBFT_OBJ) $(GNL_OBJ)
@@ -61,3 +60,5 @@ clean :
 
 fclean : clean
 	$(RM) $(NAME) $(CHECKER_NAME)
+
+re : fclean all

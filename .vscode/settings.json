@@ -31,7 +31,8 @@
         "complex": "c",
         "list": "c",
         "ios": "c",
-        "ostream": "c"
+        "ostream": "c",
+        "libft.h": "c"
     },
     "github.gitProtocol": "ssh"
 }

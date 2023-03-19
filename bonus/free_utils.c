@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 20:22:38 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/15 20:07:45 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:43:17 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ void	term(t_data *data)
 
 void	exit_err_msg(char *msg, t_data *data)
 {
+	if (msg != NULL)
+		ft_putstr_fd(msg, 2);
 	term(data);
-	ft_putstr_fd(msg, 2);
 	exit(1);
 }
 

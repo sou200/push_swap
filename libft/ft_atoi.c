@@ -6,12 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 02:07:01 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/15 03:43:04 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:40:15 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "../push_swap.h"
 
 static void	preatoi(int *sign, const char *nptr, int *i)
 {
@@ -27,10 +26,10 @@ static void	preatoi(int *sign, const char *nptr, int *i)
 
 int	ft_atoi(const char *nptr, int *status)
 {
-	int			result;
-	int			presult;
-	int			sign;
-	int			i;
+	int	result;
+	int	presult;
+	int	sign;
+	int	i;
 
 	i = 0;
 	result = 0;
@@ -41,11 +40,9 @@ int	ft_atoi(const char *nptr, int *status)
 	{
 		presult = result;
 		result = result * 10 + nptr[i] - '0';
-		if ((result / 10) != presult)
+		if ((sign * result / 10) != sign * presult)
 		{
 			*status = 1;
-			if (sign == 1)
-				return (-1);
 			return (0);
 		}
 		i++;

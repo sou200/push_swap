@@ -6,12 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:35:07 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/02 19:55:08 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:40:42 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
-
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

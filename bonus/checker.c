@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:06:53 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/19 05:45:47 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:42:56 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	is_sorted(t_stack *stack)
 	int		pval;
 
 	curr = stack->top;
+	if (curr == NULL)
+		return (0);
 	pval = curr->val;
 	while (curr != NULL)
 	{
@@ -58,7 +60,7 @@ int	main(int argc, char const *argv[])
 	t_stack	b;
 	t_data	data;
 
-	atexit(f);
+	//atexit(f);
 	init(&data, &a, &b);
 	parse(argc, argv, &data);
 	read_and_move(&data);

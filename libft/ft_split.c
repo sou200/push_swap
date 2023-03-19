@@ -6,11 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:21:05 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/02 19:55:01 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:40:35 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
 static void	freeall(char **worlds, int index)
 {

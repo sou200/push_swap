@@ -6,12 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:42:48 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/02 19:55:12 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:39:48 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
-
+#include "libft.h"
 
 static int	getstart(char const *s, char const *set, int setlen)
 {

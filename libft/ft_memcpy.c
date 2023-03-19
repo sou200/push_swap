@@ -6,11 +6,11 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:52:50 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/02 19:56:20 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:40:24 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
