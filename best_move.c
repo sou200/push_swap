@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 00:27:05 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 04:58:09 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 02:18:08 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void	do_the_best_move(t_data *data)
 	t_node	*anode;
 	int		adown;
 	int		bdown;
+
 	bnode = get_best_move_node(data);
 	anode = get_node_to_elevate(data, bnode);
 	adown = anode->index > data->a->size / 2;

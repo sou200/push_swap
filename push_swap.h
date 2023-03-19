@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 02:15:37 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/18 23:39:50 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 03:36:32 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,11 @@ int					valid_move(t_data *data, t_node *anode, t_node *bnode);
 int					is_sorted(t_stack *stack);
 void				sort(t_data *data);
 
+void				ultra_lite_sort(t_data *data);
+void				lite_sort(t_data *data);
+void				lovely_sort(t_data *data);
+
+void				set_array(int *arr, int val, int len);
+int					get_val_by_index(t_stack *stack, int index);
 
 #endif

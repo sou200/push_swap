@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 03:02:44 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/17 21:56:55 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 02:19:27 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	rra(t_data *data, int print)
 		data->a->top->next->next->prev = NULL;
 	data->a->top->next->next = NULL;
 	data->a->top = data->a->top->next;
-	if(print)
+	if (print)
 		ft_putstr_fd("rra\n", STDOUT_FILENO);
 }
 
@@ -36,7 +36,7 @@ void	rrb(t_data *data, int print)
 		data->b->top->next->next->prev = NULL;
 	data->b->top->next->next = NULL;
 	data->b->top = data->b->top->next;
-	if(print)
+	if (print)
 		ft_putstr_fd("rrb\n", STDOUT_FILENO);
 }
 
@@ -44,6 +44,6 @@ void	rrr(t_data *data, int print)
 {
 	rra(data, 0);
 	rrb(data, 0);
-	if(print)
+	if (print)
 		ft_putstr_fd("rrr\n", STDOUT_FILENO);
 }

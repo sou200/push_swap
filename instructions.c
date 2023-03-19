@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 01:39:20 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/17 22:21:31 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 02:20:24 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	sa(t_data *data, int print)
 	data->a->top->next->next = NULL;
 	data->a->top->next->prev = data->a->top;
 	data->a->top = data->a->top->next;
-	if(print)
+	if (print)
 		ft_putstr_fd("sa\n", STDOUT_FILENO);
 }
 
@@ -38,7 +38,7 @@ void	sb(t_data *data, int print)
 	data->b->top->next->next = NULL;
 	data->b->top->next->prev = data->b->top;
 	data->b->top = data->b->top->next;
-		if(print)
+	if (print)
 		ft_putstr_fd("sb\n", STDOUT_FILENO);
 }
 
@@ -46,7 +46,7 @@ void	ss(t_data *data, int print)
 {
 	sa(data, 0);
 	sb(data, 0);
-	if(print)
+	if (print)
 		ft_putstr_fd("ss\n", STDOUT_FILENO);
 }
 
@@ -62,7 +62,7 @@ void	pa(t_data *data, int print)
 	push_node(data->a, data->b->top);
 	data->b->top = tmpnode;
 	data->b->size--;
-	if(print)
+	if (print)
 		ft_putstr_fd("pa\n", STDOUT_FILENO);
 }
 
@@ -78,6 +78,6 @@ void	pb(t_data *data, int print)
 	push_node(data->b, data->a->top);
 	data->a->top = tmptop;
 	data->a->size--;
-	if(print)
+	if (print)
 		ft_putstr_fd("pb\n", STDOUT_FILENO);
 }

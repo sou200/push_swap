@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 20:22:38 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/17 21:51:25 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 03:46:46 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ void	term(t_data *data)
 {
 	free_stack(data->a);
 	free_stack(data->b);
+	free_stack(data->subseq);
+	if (data->sub_len != NULL)
+		free(data->sub_len);
+	if (data->sub_indexes != NULL)
+		free(data->sub_indexes);
 }
 
 void	exit_err_msg(char *msg, t_data *data)

@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 19:38:10 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/17 21:51:51 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 03:34:40 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ static void	getint(t_data *data, const char *arg)
 {
 	t_node	*node;
 	int		val;
-	int status;
+	int		status;
 
 	if (isvalid(arg))
 	{
 		val = ft_atoi(arg, &status);
-		if(status == 1)
+		if (status == 1)
 			exit_err_msg(ERR_MSG, data);
 		if (check_dup(val, data))
 			exit_err_msg(ERR_MSG, data);

@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 03:02:37 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/17 22:21:59 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 02:19:45 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ra(t_data *data, int print)
 		data->a->top->prev->next = NULL;
 	data->a->top->prev = NULL;
 	data->a->top = tmplast;
-	if(print)
+	if (print)
 		ft_putstr_fd("ra\n", STDOUT_FILENO);
 }
 
@@ -42,7 +42,7 @@ void	rb(t_data *data, int print)
 		data->b->top->prev->next = NULL;
 	data->b->top->prev = NULL;
 	data->b->top = tmplast;
-	if(print)
+	if (print)
 		ft_putstr_fd("rb\n", STDOUT_FILENO);
 }
 
@@ -50,6 +50,6 @@ void	rr(t_data *data, int print)
 {
 	ra(data, 0);
 	rb(data, 0);
-	if(print)
+	if (print)
 		ft_putstr_fd("rr\n", STDOUT_FILENO);
 }
