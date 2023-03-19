@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 02:15:37 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/19 03:36:32 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 04:14:19 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void				term(t_data *data);
 
 # define ERR_MSG "Error.\n"
 
-void				lis(t_data *data, t_stack *stack);
+void				lis(t_data *data);
 void				push_lis(t_data *data);
 
 void				set_moves(t_data *data);

@@ -28,6 +28,10 @@
         "thread": "c",
         "variant": "c",
         "vector": "c",
-        "complex": "c"
-    }
+        "complex": "c",
+        "list": "c",
+        "ios": "c",
+        "ostream": "c"
+    },
+    "github.gitProtocol": "ssh"
 }

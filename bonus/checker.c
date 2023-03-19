@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chicker.c                                          :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:06:53 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/16 03:22:00 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 05:45:47 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,29 +39,30 @@ int	is_sorted(t_stack *stack)
 	return (1);
 }
 
-void check_sort(t_stack *stack)
+void	check_sort(t_stack *stack)
 {
-	if(is_sorted(stack))
+	if (is_sorted(stack))
 		ft_putstr_fd(OK_MSG, STDOUT_FILENO);
 	else
 		ft_putstr_fd(KO_MSG, STDOUT_FILENO);
 }
 
-void f()
+void	f(void)
 {
 	system("leaks my_checker");
 }
 
-int main(int argc, char const *argv[])
+int	main(int argc, char const *argv[])
 {
-    t_stack	a;
+	t_stack	a;
 	t_stack	b;
 	t_data	data;
+
 	atexit(f);
-    init(&data, &a, &b);
-	parse(argc,argv,&data);
+	init(&data, &a, &b);
+	parse(argc, argv, &data);
 	read_and_move(&data);
 	check_sort(data.a);
 	term(&data);
-    return 0;
+	return (0);
 }

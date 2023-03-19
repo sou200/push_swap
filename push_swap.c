@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:06:53 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/19 03:44:36 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 04:16:22 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int argc, char const *argv[])
 	t_stack	b;
 	t_stack	subseq;
 	t_data	data;
-	atexit(f);
+	//atexit(f);
 	init(&data, &a, &b, &subseq);
 	parse(argc, argv, &data);
 	sort(&data);

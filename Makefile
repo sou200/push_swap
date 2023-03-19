@@ -1,3 +1,12 @@
+define draw
+	@echo "\033[1;31m    ____             __       _____                    \033[0m"
+	@echo "\033[1;31m   / __ \__  _______/ /_     / ___/      ______ _____  \033[0m"
+	@echo "\033[1;31m  / /_/ / / / / ___/ __ \    \__ \ | /| / / __ \`/ __ \ \033[0m"
+	@echo "\033[1;31m / ____/ /_/ (__  ) / / /   ___/ / |/ |/ / /_/ / /_/ / \033[0m"
+	@echo "\033[1;31m/_/    \__,_/____/_/ /_/   /____/|__/|__/\__,_/ .___/  \033[0m"
+	@echo "\033[1;31m                                             /_/       \033[0m"
+endef
+
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
@@ -36,15 +45,19 @@ all : $(NAME)
 
 $(NAME) : $(OBJ) $(LIBFT_OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
+	$(call draw)
 
 %.o : %.c push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
+	$(call draw)
 
 bonus : $(BNS_OBJ) $(LIBFT_OBJ) $(GNL_OBJ)
 	$(CC) $(CFLAGS) $^ -o $(CHECKER_NAME)
+	$(call draw)
 
 clean : 
 	$(RM) $(OBJ) $(BNS_OBJ) $(LIBFT_OBJ) $(GNL_OBJ)
+	$(call draw)
 
 fclean : clean
 	$(RM) $(NAME) $(CHECKER_NAME)

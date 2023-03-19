@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 23:39:20 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/19 03:37:36 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 04:15:04 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ void	ultra_lite_sort(t_data *data)
 
 void	lite_sort(t_data *data)
 {
-	t_node	*anode;
-
 	while (data->a->size > 3)
 	{
 		indexing(data->a);
@@ -57,7 +55,7 @@ void	lite_sort(t_data *data)
 
 void	lovely_sort(t_data *data)
 {
-	lis(data, data->a);
+	lis(data);
 	push_lis(data);
 	while (data->b->size > 0)
 	{

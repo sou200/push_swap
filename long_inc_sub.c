@@ -6,7 +6,7 @@
 /*   By: serhouni <serhouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 20:17:41 by serhouni          #+#    #+#             */
-/*   Updated: 2023/03/19 02:22:46 by serhouni         ###   ########.fr       */
+/*   Updated: 2023/03/19 05:06:03 by serhouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	push_lis(t_data *data)
 	}
 }
 
-int	get_max_index(int *arr, int len)
+static int	get_max_index(int *arr, int len)
 {
 	int	max_index;
 	int	i;
@@ -63,7 +63,7 @@ static void	get_lis(t_data *data)
 	}
 }
 
-void	initlis(t_data *data)
+static void	initlis(t_data *data)
 {
 	data->sub_len = malloc(data->a->size * sizeof(int));
 	if (data->sub_len == NULL)
@@ -76,7 +76,7 @@ void	initlis(t_data *data)
 	set_array(data->sub_len, 1, data->a->size);
 }
 
-void	lis(t_data *data, t_stack *stack)
+void	lis(t_data *data)
 {
 	t_node	*i;
 	t_node	*j;
